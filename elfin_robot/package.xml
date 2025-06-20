@@ -16,23 +16,22 @@
 
   <buildtool_depend>catkin</buildtool_depend>
 
-  <exec_depend>elfin3_moveit_config</exec_depend>
-  <exec_depend>elfin5_moveit_config</exec_depend>
-  <exec_depend>elfin10_moveit_config</exec_depend>
+  <exec_depend>elfin_s05_moveit_config</exec_depend>
+  <exec_depend>elfin_s10_moveit_config</exec_depend>
+  <exec_depend>elfin_s20_moveit_config</exec_depend>
+  <exec_depend>elfin_s30_moveit_config</exec_depend>
   <exec_depend>elfin_basic_api</exec_depend>
   <exec_depend>elfin_description</exec_depend>
   <exec_depend>elfin_ethercat_driver</exec_depend>
   <exec_depend>elfin_ethercat_driver</exec_depend>
   <exec_depend>elfin_gazebo</exec_depend>
-  <exec_depend>elfin3_ikfast_plugin</exec_depend>
-  <exec_depend>elfin5_ikfast_plugin</exec_depend>
-  <exec_depend>elfin10_ikfast_plugin</exec_depend>
-  <exec_depend>elfin_kinematic_solver</exec_depend>
+  <exec_depend>S05_ikfast_elfin_arm_plugin</exec_depend>
+  <exec_depend>S10_ikfast_elfin_arm_plugin</exec_depend>
+  <exec_depend>S20_ikfast_elfin_arm_plugin</exec_depend>
+  <exec_depend>S30_ikfast_elfin_arm_plugin</exec_depend>
   <exec_depend>elfin_robot_bringup</exec_depend>
   <exec_depend>elfin_robot_msgs</exec_depend>
   <exec_depend>elfin_ros_control</exec_depend>
-  <exec_depend>elfin_ros_control</exec_depend>
-  <exec_depend>elfin_ros_controllers</exec_depend>
   
   <export>
     <metapackage/>

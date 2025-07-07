@@ -14,7 +14,7 @@
     <xacro:property name="density" value="3.09"/>
 
     <!-- Used by Elfin S utilities -->
-    <xacro:if value="include_world">
+    <xacro:if value="${include_world}">
       <link name="world"/>
 
       <joint name="world_base" type="fixed">
@@ -120,7 +120,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- shoulder_pan_joint -->
     <joint
       name="${prefix}shoulder_pan_joint"
       type="revolute">
@@ -180,7 +179,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- shoulder_lift_joint -->
     <joint
       name="${prefix}shoulder_lift_joint"
       type="revolute">
@@ -240,7 +238,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- elbow_joint -->
     <joint
       name="${prefix}elbow_joint"
       type="revolute">
@@ -300,7 +297,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- wrist_1_joint -->
     <joint
       name="${prefix}wrist_1_joint"
       type="revolute">
@@ -360,7 +356,6 @@
         </geometry>
       </collision>
     </link>
-    <!-- wrist_2_joint -->
     <joint
       name="${prefix}wrist_2_joint"
       type="revolute">
@@ -420,8 +415,12 @@
         </geometry>
       </collision>
     </link>
-    <!-- TODO: localization_joint is missing -->
-    <!-- wrist_3_joint -->
+    <link name="${prefix}localization_link" />
+    <joint name="${prefix}localization_joint" type="fixed">
+      <origin xyz="0 0 0.138" rpy="0 0 0" />
+      <parent link="${prefix}wrist_2_link" />
+      <child link="${prefix}localization_link" />
+    </joint>
     <joint
       name="${prefix}wrist_3_joint"
       type="revolute">
@@ -444,7 +443,6 @@
     <link
       name="${prefix}tool0">
     </link>
-    <!-- tool0_joint -->
     <joint
       name="${prefix}tool0_joint"
       type="fixed">
@@ -457,7 +455,7 @@
         link="${prefix}tool0" />
     </joint>
     
-    <link name="${prefix}elfin_dummy_gripper"/>
+    <!--<link name="${prefix}elfin_dummy_gripper"/>
     
     <joint name="${prefix}elfin_dummy_joint" type="fixed">
       <origin
@@ -467,6 +465,6 @@
         link="${prefix}wrist_3_link" />
       <child
         link="${prefix}elfin_dummy_gripper" />
-    </joint>
+    </joint>-->
   </xacro:macro>
 </robot>

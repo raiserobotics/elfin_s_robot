@@ -45,7 +45,7 @@ int main(int argc, char** argv)
 
     ros::CallbackQueue move_group_cb_queue;
 
-    std::string move_group_name="elfin_arm";
+    std::string move_group_name="right_arm";
     std::string move_group_desc="robot_description";
     ros::NodeHandle move_group_nh;
     move_group_nh.setCallbackQueue(&move_group_cb_queue);
@@ -66,7 +66,7 @@ int main(int argc, char** argv)
 
     //boost::shared_ptr<tf::Transformer> tf_ptr(new tf::Transformer());
 
-    robot_model_loader::RobotModelLoaderPtr robot_model_loader(new robot_model_loader::RobotModelLoader("robot_description"));
+    robot_model_loader::RobotModelLoaderPtr robot_model_loader(new robot_model_loader::RobotModelLoader("/robot_description"));
 
     planning_scene_monitor::PlanningSceneMonitorPtr planning_scene_monitor(new planning_scene_monitor::PlanningSceneMonitor(robot_model_loader));
 

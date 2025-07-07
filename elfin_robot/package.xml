@@ -19,7 +19,6 @@
   <exec_depend>elfin_s05_moveit_config</exec_depend>
   <exec_depend>elfin_s10_moveit_config</exec_depend>
   <exec_depend>elfin_s20_moveit_config</exec_depend>
-  <exec_depend>elfin_s30_moveit_config</exec_depend>
   <exec_depend>elfin_basic_api</exec_depend>
   <exec_depend>elfin_description</exec_depend>
   <exec_depend>elfin_ethercat_driver</exec_depend>
